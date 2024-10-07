@@ -16,7 +16,7 @@ View(mpg_ford)
 mpg_metric <- mutate(mpg, cty_metric = cty * 0.425144)
 glimpse(mpg_metric)
 
-#mpg will be passed as the first to the mutate function
+#mpg will be passed as the first parameter to the mutate function
 mpg_metric <- mpg %>% # Cmd + Shift + M 
   mutate(cty_metric = cty * 0.425144)
 
