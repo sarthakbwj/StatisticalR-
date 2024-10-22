@@ -17,7 +17,6 @@ num
 
 
 
-
 # DATAFRAMES
 
 
@@ -78,6 +77,23 @@ Total <- sum(Mario , Peach , Bowser)
 print(paste("Total Votes:", Total))
 
 
+# clear environment using rm(list = ls()) in console
 
+# read csv and make a table 
+
+votes <- read.table(
+  "votes.csv",
+  sep = ",",
+  header = TRUE
+)
+
+
+# Special Values
+
+# Inf = Infinity
+# -Inf = Negative Infinity
+# NA = Not Available (a value could have been here but is missing.)
+# NaN = Not a Number 
+# NULL = Nothing (absolutely nothing.)
 
 
