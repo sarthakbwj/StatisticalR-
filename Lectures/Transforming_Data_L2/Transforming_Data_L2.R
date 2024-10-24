@@ -52,5 +52,4 @@ temps[filter]
 # ! means the opposite... so, 
 
 sieve <- !(temps < 0 | temps > 60)
-temps[sieve
-
+temps[sieve]
