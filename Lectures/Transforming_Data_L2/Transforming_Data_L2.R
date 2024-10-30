@@ -49,7 +49,7 @@ filter <- (temps < 0 | temps > 60)
 # passing 'filter' through 'temps' returns the values - a subset of outliers. 
 temps[filter]
 
-# ! means the opposite...
+# ! means the opposite..
 
 sieve <- !(temps < 0 | temps > 60)
 temps[sieve]
