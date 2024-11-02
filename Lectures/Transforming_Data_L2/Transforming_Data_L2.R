@@ -1,3 +1,4 @@
+# Tuples in R can store numeric and character types.  
 # Outliers are data points which fall outside of the Data range. 
 
 load("temps.RData") # load Data in IDE
@@ -36,6 +37,8 @@ which(temps < 0)
 # & - 'and'
 # | - 'or'
 
+# Logical Expressions asks 1 question whereas Logical Operators ask 2 or more.  
+
 which(temps < 0 | temps > 60) 
 # -which will remove all the elements which evaluate to TRUE from the vector. 
 
@@ -56,4 +59,8 @@ temps[filter]
 # ! means the opposite...
 
 sieve <- !(temps < 0 | temps > 60)
-temps[sieve]
+no_outliers <- temps[sieve]
+no_outliers
+
+save(no_outliers, file = "no_outliers.RData")
+
