@@ -12,3 +12,17 @@ casein_chicks <- chicks[1:3,]
 mean(casein_chicks$weight)
 
 
+# Logical Functions 
+
+# is.infinite
+# is.na
+# is.nan
+# is.null
+
+which(is.na(chicks$weight))
+
+
+# subset a DataSet without the NA values. 
+chicks[!is.na(chicks$weight), ]
+
+
