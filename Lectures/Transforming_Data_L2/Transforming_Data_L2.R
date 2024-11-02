@@ -6,7 +6,8 @@ mean(temps)
 # index into the data using position values
 temps[2] 
 temps[4]
-temps[7]
+temps[7] 
+temps[c(2,4,7)]  # combine individual places of a vector in a new vector. 
 
 # creating a vector(list) of outliers and removing them from
 # the original vector - Transforming Vectors
@@ -22,6 +23,9 @@ temps[-c(2,4,7)]
 #  < 'less than'
 # >= 'greater than or equal to'
 # <= 'less than or equal to'
+
+# Example of Logical Expression to ask questions and get output in TRUE or FALSE
+temps[1] < 0
 
 
 # outputs indexes which return TRUE as the result of the evaluating each expression.
