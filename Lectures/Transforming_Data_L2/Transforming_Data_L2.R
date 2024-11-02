@@ -63,4 +63,3 @@ no_outliers <- temps[sieve]
 no_outliers
 
 save(no_outliers, file = "no_outliers.RData")
-
