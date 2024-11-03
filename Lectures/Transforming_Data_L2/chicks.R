@@ -69,6 +69,3 @@ if (feed_choice < 1 || feed_choice > 6){
   selected_feed <- feed_options[feed_choice]
   print(subset(chicks, feed == selected_feed))
 }
-
-
-
