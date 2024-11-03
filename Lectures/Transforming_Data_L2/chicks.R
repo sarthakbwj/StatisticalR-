@@ -23,6 +23,28 @@ which(is.na(chicks$weight))
 
 
 # subset of the DataSet without the NA values. 
-chicks[!is.na(chicks$weight), ]
+chicks <- chicks[!is.na(chicks$weight), ]
+chicks
+ 
+# another way of writing the above line using the keyword "subset"
+chicks <- subset(chicks, is.na(weight))
+
+# creating a subset of chicks who were feed linseed.
+soybean_chicks <- subset(chicks, feed == "soybean")
+View(soybean_chicks)
+mean(soybean_chicks$weight)
+summary(soybean_chicks$weight)
+
+# resetting row names after excluding NAs
+rownames(chicks) <- NULL
+rownames(chicks)
+
+
+# another way to know the number of NAs in original Data Set. 
+sum(is.na(chicks$weight))
+
+
+
+
 
 
