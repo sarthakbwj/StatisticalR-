@@ -39,12 +39,20 @@ summary(soybean_chicks$weight)
 rownames(chicks) <- NULL
 rownames(chicks)
 
-
 # another way to know the number of NAs in original Data Set. 
 sum(is.na(chicks$weight))
 
+# Escape Characters 
+# \n - new line 
+# \t - tab
 
+# clean NAs and create a subset
+chicks <- subset(chicks, !is.na(weights))
 
+# Determine feed options
+feed_options <- unique(chicks$feed)
 
-
+# Format options 
+formatted_options <- paste0(1:6, ". ", feed_options)
+formatted_options
 
