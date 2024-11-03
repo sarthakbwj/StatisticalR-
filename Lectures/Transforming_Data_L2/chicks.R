@@ -53,6 +53,22 @@ chicks <- subset(chicks, !is.na(weights))
 feed_options <- unique(chicks$feed)
 
 # Format options 
-formatted_options <- paste0(1:6, ". ", feed_options)
-formatted_options
+formatted_options <- paste0(1:lenght(feed_options), ". ", feed_options)
+
+# Prompt user with options
+cat(formatted_options, sep = "\n")
+feed_choice <- as.integer(readline("Feed Type: "))
+
+# CONDITIONALS (if, else if, else)
+
+# Handel invalid input 
+if (feed_choice < 1 || feed_choice > 6){
+  cat("Invalid Choice")
+} else{ 
+  # Print selected option
+  selected_feed <- feed_options[feed_choice]
+  print(subset(chicks, feed == selected_feed))
+}
+
+
 
