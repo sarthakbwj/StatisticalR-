@@ -22,7 +22,7 @@ mean(casein_chicks$weight)
 which(is.na(chicks$weight))
 
 
-# subset a DataSet without the NA values. 
+# subset of the DataSet without the NA values. 
 chicks[!is.na(chicks$weight), ]
 
 
