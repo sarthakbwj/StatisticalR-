@@ -15,4 +15,7 @@ sales <- rbind(Q1,Q2,Q3,Q4)
 sales
 
 # adding a column "Value" 
-ifelse (sales$sale_amount > 100)
+# "ifelse" as a function 
+sales$value <- ifelse(sales$sale_amount > 100, "High Value", "Regular")
+View(sales)
+ 
