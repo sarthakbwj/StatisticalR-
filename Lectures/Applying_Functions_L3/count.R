@@ -1,3 +1,5 @@
+# 'cat' means concatenate and print. 
+
 get_votes <- function(prompt = "Enter Votes: ") {    # create function and parameter
   votes <- suppressWarnings(as.integer(readline(prompt)))     # deploy parameter
   if (is.na(votes)) {
@@ -47,6 +49,13 @@ q <- 3
 while (q != 0){
   cat("Quack\n")
   q <- q - 1 
+}
+
+
+# FOR LOOP (iterating over vector)
+
+for(e in 1:10) {
+  cat("Quack\n")
 }
 
 
