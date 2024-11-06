@@ -1,11 +1,16 @@
 get_votes <- function(prompt = "Enter Votes: ") {    # create function and parameter
-  votes <- as.integer(readline(prompt))     # deploy parameter
+  votes <- suppressWarnings(as.integer(readline(prompt)))     # deploy parameter
   if (is.na(votes)) {
     return (0)
   } else {
     return (votes)
   }
 }
+
+# if and else can be combined.
+# ifelse(is.na(votes), 0, votes)
+
+#Suppress Warnings: since the corner cases are being handled, the warnings can be suppressed. 
 
 Mario <- get_votes("Mario: ")     # define parameter 
 Peach <- get_votes("Peach: ")
