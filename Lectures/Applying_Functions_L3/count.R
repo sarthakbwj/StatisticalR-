@@ -24,3 +24,29 @@ print(paste("Total Votes:", Total))
 # certain functions have a global scope while the one's defined within the 
 # function body have a local scope. 
 
+
+
+# REPEAT LOOP
+
+i <- 3
+repeat {
+  cat("quack!\n")
+  i <- i - 1
+  if (i == 0) {
+    break
+  } else {
+    next
+  }
+}
+
+
+# WHILE LOOP 
+
+q <- 3
+
+while (q != 0){
+  cat("Quack\n")
+  q <- q - 1 
+}
+
+
