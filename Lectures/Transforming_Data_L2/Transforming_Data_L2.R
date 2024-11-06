@@ -66,7 +66,7 @@ save(no_outliers, file = "no_outliers.RData")
 
 
 # LISTS vs VECTORS
-
+# Lists can store more than one datatype whereas vectors can only store single datatype at a time. 
 
 
 
