@@ -58,4 +58,25 @@ for(e in 1:10) {
   cat("Quack\n")
 }
 
+  
+# better version of the above code
+
+get_votes <- function(prompt = "Enter votes: "){
+  repeat { 
+    votes <- suppressWarnings(as.integer(readline(prompt)))
+    if(!is.na(votes)){
+      return(votes)
+    }
+  }
+}
+
+
+total <- 0
+for (i in c("Maria", "Peach", "Bowser")){
+  votes <- get_votes(paste0(i, ": "))
+  total <- total + votes
+}
+
+cat ("Total votes: ", total)
+
 
