@@ -12,4 +12,7 @@ total_votes
 # apply helps iterate over rows and columns and perform operations, no need to write loops.  
 # margin 1 = rows and margin 2 = columns. 
 
-apply(votes, MARGIN = 1, FUN = sum)
+total_votes <- apply(votes, MARGIN = 1, FUN = sum)
+apply(votes, MARGIN = 2, FUN = sum)
+sort(total_votes, decreasing = TRUE)
+
