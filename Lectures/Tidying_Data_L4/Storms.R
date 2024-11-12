@@ -35,7 +35,7 @@ hurricanes <- storms |>    # from the DS storms...
 
 hurricanes
 
-hurricanes |>
+hurricanes |> 
   select(c(year, name, wind)) |>
   write.csv("hurricanes.csv", row.names = FALSE) 
 
