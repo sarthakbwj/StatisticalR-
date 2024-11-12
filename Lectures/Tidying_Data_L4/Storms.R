@@ -27,9 +27,10 @@ dplyr::filter(
 # by the other arguments. Its similar to nesting in python. The output of one is the
 # input for another. 
 
-storms |> 
-  select(!c(lat, long, pressure, ends_with("diameter"))) |>
-  filter(status == "hurricane")
+storms |>    # from the DS storms...
+  select(!c(lat, long, pressure, ends_with("diameter"))) |>   # ignore columns lat, long.....
+  filter(status == "hurricane") |>   # show rows only with 'hurricane' as status.
+  arrange(desc(wind), name)   # show max windspeed at the top and names in ascending. 
   
 
 
