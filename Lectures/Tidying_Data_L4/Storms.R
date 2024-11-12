@@ -30,8 +30,8 @@ dplyr::filter(
 storms |>    # from the DS storms...
   select(!c(lat, long, pressure, ends_with("diameter"))) |>   # ignore columns lat, long.....
   filter(status == "hurricane") |>   # show rows only with 'hurricane' as status.
-  arrange(desc(wind), name)   # show max windspeed at the top and names in ascending. 
-  
+  arrange(desc(wind), name) |>  # show max wind speed at the top and names in ascending. 
+  distinct(name, year, .keep_all = TRUE)  # unique names with year while keeps others rows similar to main DS.
 
 
 
