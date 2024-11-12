@@ -11,7 +11,7 @@
 
 # Distinct - outputs distinct data and omit repeated ones. 
 
-# Group by - 
+# Group by - create groups from DS to make it cognizable. 
 
 # Summarize - 
 

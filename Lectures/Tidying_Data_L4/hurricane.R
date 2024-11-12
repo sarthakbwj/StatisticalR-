@@ -8,5 +8,7 @@ hurricane <- read.csv("/Users/sarthakbwj/Documents/GitHub/Statistical_R/Lectures
 View(hurricane)
 
 hurricane |>
-  distinct(year, .keep_all = TRUE) |>
-  arrange(year)
+  group_by(year) |>
+  arrange(desc(wind)) |>
+  slice_head()  # output the first row of the groups. 
+
