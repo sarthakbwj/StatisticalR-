@@ -1,4 +1,6 @@
+library("dplyr")
 storms
+
 # CRAN : Comprehensive R Archive Network 
 # load a package and use a function from it. 
 
@@ -39,7 +41,6 @@ hurricanes |>
   select(c(year, name, wind)) |>
   write.csv("hurricanes.csv", row.names = FALSE) 
 
-# strongest hurricane in each given year.
 
 
 
