@@ -39,8 +39,11 @@ hurricanes
 
 hurricanes |> 
   select(c(year, name, wind)) |>
-  write.csv("hurricanes.csv", row.names = FALSE) 
+  write.csv("hurricanes.csv", row.names = FALSE)
 
-
+hurricanes |> 
+  group_by(year) |>
+  slice_max(order_by = wind) |>
+  ungroup()
 
 
