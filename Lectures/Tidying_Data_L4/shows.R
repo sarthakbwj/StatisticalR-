@@ -5,6 +5,8 @@ shows$show <- shows$show |>
   str_trim() |>   # removes white spaces from the beginning and the end. 
   str_squish() |>   # removes extra white spaces between the words.
   str_to_title()  
+  
+str_detect(shows$show, "Avatar")
 
 
 shows |>
