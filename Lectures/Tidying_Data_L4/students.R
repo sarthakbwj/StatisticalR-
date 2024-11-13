@@ -9,5 +9,14 @@ new_students <- pivot_wider(
   values_from = value # take rows from 'value'
 )
 
-new_students
+new_students$GPA <- as.numeric(new_students$GPA)
+
+new_students |>
+  group_by(major) |>
+  summarize(GPA = mean(GPA))
+
+
+
+
+
 
