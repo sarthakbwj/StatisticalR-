@@ -13,6 +13,19 @@
 
 # Group by - create groups from DS to make it cognizable. 
 
-# Summarize - 
+# Summarize - to summarize data in each particular group. 
+
+
+
+
+# TIDYVERSE (library) is used to tidy the data and restructure it into usable and logical format. 
+
+# tidyr - for transforming data
+
+# stringr - clean the data
+    # str_trim: removes excess white space from the beginning and the end. 
+    # str_squish: removes excess white space between the words.
+    # str_to_lower, str_to_upper, str_to_title: change formatting of the word. 
+    # 
 
 
