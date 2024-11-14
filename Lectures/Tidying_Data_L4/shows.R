@@ -6,12 +6,12 @@ shows$show <- shows$show |>
   str_squish() |>   # removes extra white spaces between the words.
   str_to_title()  
   
-str_detect(shows$show, "Avatar")
+shows$show[str_detect(shows$show, "Avatar")]
 
 
 shows |>
   group_by(show) |> 
-  summarize(votes = n()) |> # make column votes and the number of times it has been repeated will show up.
+  summarize(votes = n()) |> # make column votes and display the number of times it has been repeated.
   ungroup() |>
   arrange(desc(votes))
 
