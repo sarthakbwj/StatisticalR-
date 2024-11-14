@@ -26,6 +26,6 @@
     # str_trim: removes excess white space from the beginning and the end. 
     # str_squish: removes excess white space between the words.
     # str_to_lower, str_to_upper, str_to_title: change formatting of the word. 
-    # 
+    # str_detect: looks for a specific character from the Data. 
 
 

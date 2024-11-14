@@ -6,7 +6,8 @@ shows$show <- shows$show |>
   str_squish() |>   # removes extra white spaces between the words.
   str_to_title()  
   
-shows$show[str_detect(shows$show, "Avatar")]
+# detect the word "Avatar" in data set and replace all of them with "Avatar: The Last Airbender" 
+shows$show[str_detect(shows$show, "Avatar")] <- "Avatar: The Last Airbender"
 
 
 shows |>
