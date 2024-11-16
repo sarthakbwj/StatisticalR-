@@ -6,13 +6,9 @@ library("ggplot2")
 
 votes <- read.csv("/Users/sarthakbwj/Documents/GitHub/Statistical_R/Lectures/Visualizing_Data_L5/votes.csv")
 
+# ggplot = plotting the graph
+# geom_col = designing the graph
 
-
-ggplot() # blank canvas
-
-ggplot(votes, 
-       aes(x = candidate, y = votes),
-       barplot(height = 1, width = 1),
-       labs(title = "Votes"))
-
-?barplot
+ggplot(votes, aes(x = candidate, y = votes)) + 
+  geom_col()
+  
