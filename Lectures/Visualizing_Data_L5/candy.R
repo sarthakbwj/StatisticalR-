@@ -16,8 +16,4 @@ ggplot(
     y = "Sugar",
     title = "Price and Sugar Relationship"
   ) +
-  theme_classic() 
-  
-
-
-
+  theme_classic()
