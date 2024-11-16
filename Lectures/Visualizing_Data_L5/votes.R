@@ -6,25 +6,16 @@ library("ggplot2")
 
 votes <- read.csv("/Users/sarthakbwj/Documents/GitHub/Statistical_R/Lectures/Visualizing_Data_L5/votes.csv")
 
-# ggplot = plotting the graph
-# geom_col = designing the graph
-# scales = 2 types: Discrete & Continuous
 
-ggplot(votes, aes(x = candidate, y = votes)) + 
-  geom_col() + 
-  scale_y_continuous(limits = c(0,255)) + 
-  labs(
+ggplot(votes, aes(x = candidate, y = votes)) +    #defining values of x and y axis. 
+  geom_col(aes(fill = candidate)) +   # new color for each candidate. 
+  scale_fill_viridis_d("Candidates") +        # color blind friendly
+  scale_y_continuous(limits = c(0,255)) +       # creating headroom
+  labs(             # label
     x = "Candidates",
-    y = "Votes"
-  )
+    y = "Votes",
+    title = "Election Results"
+  ) + 
+  theme_classic()   # themes are added at the end.
 
-
-
-
-
-
-
-
-
-
-  
+   
