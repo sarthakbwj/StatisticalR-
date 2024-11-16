@@ -8,7 +8,23 @@ votes <- read.csv("/Users/sarthakbwj/Documents/GitHub/Statistical_R/Lectures/Vis
 
 # ggplot = plotting the graph
 # geom_col = designing the graph
+# scales = 2 types: Discrete & Continuous
 
 ggplot(votes, aes(x = candidate, y = votes)) + 
-  geom_col()
+  geom_col() + 
+  scale_y_continuous(limits = c(0,255)) + 
+  labs(
+    x = "Candidates",
+    y = "Votes"
+  )
+
+
+
+
+
+
+
+
+
+
   
