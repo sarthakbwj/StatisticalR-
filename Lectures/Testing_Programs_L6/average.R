@@ -3,13 +3,14 @@
 # stop - to terminate the program due to an error.
 
 average <- function(x) {
+  if (any(is.na(x))) {
+    warning("`x` contains one or more NA values.")
+    return(NA)
+  }
   if(!is.numeric(x)) {
     stop("`x` must be a numberic vector.")
   }
-  if (any(is.na(x))) {
-      warning("`x` contains one or more NA values.")
-      return(NA)
-  }
+  
   sum(x)/length(x)
 }
 
