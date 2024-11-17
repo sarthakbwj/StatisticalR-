@@ -11,6 +11,10 @@ ggplot(
       color = "deepskyblue4",
       size = 1.5  
   ) +
+  geom_hline(
+    linetype = 3,
+    yintercept = 65
+  ) + 
   labs(
     x = "Data",
     y = "Wind Speed",
@@ -19,7 +23,7 @@ ggplot(
   theme_classic()
 
 
-#ggsave(
+ggsave(
   "anita.png",
   width = 900, 
   height = 1200,
