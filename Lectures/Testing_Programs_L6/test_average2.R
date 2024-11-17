@@ -5,6 +5,7 @@ test_that("`average` function calculates the mean", {
   expect_equal(average(c(1,2,3)), 2)
   expect_equal(average(c(-1,-2,-3)), -2)
   expect_equal(average(c(-1,0,1)), 0)
+  expect_equal(average(c(0.1,0.5)), 0.3, tolerance = 1e-8)
 })
 
 test_that("`average` returns NAs with NAs in input", {
